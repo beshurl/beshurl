@@ -23,7 +23,8 @@ const server = http.createServer(async (req,res) => {
     const target = resolve(root, '.' + pathname);
     if (!target.startsWith(root.replace(/\/$/,'') + sep)) {res.writeHead(403);res.end();return;}
     const data = await readFile(target);
-    res.writeHead(200,{'Content-Type': target.endsWith('.svg')?'image/svg+xml':target.endsWith('.md')?'text/plain; charset=utf-8':'application/octet-stream'});
+    const types = {svg:'image/svg+xml',png:'image/png',jpg:'image/jpeg',jpeg:'image/jpeg',gif:'image/gif',webp:'image/webp',md:'text/plain; charset=utf-8'};
+    res.writeHead(200,{'Content-Type': types[target.split('.').pop()] || 'application/octet-stream'});
     res.end(data);
   } catch {res.writeHead(404);res.end('Not found');}
 });

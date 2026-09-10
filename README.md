@@ -1,60 +1,63 @@
-<!-- Original profile art: scripts/build-profile-assets.mjs. Content evidence: .github/profile/SOURCES.md. -->
+<!-- Screenshots are original files from the linked project READMEs. Sources: .github/profile/SOURCES.md. -->
 
-<picture>
-  <source media="(max-width: 600px)" srcset="./assets/hero-mobile.svg" />
-  <img src="./assets/hero.svg" width="100%" alt="beshurl · 정준용 — Full-Stack Developer. Build across the stack. 화면에서 데이터까지, 하나의 서비스로." />
-</picture>
+# 정준용 · Jeong Jun Yong
 
-<p align="center">
+**Full-Stack Developer** &nbsp; · &nbsp; Web / Backend / 3D
+
+React·Next.js·Vue로 사용자 흐름을 만들고, Java·Spring으로 API와 데이터를 연결합니다.<br />Unity·C#으로 책과 취향을 담는 3D 공간도 만들었습니다.
+
+<p>
   <a href="#selected-work">Selected work</a> &nbsp; / &nbsp;
   <a href="#stack--tools">Stack &amp; tools</a> &nbsp; / &nbsp;
   <a href="#beyond-the-featured">More projects</a>
 </p>
 
-### 안녕하세요, 정준용입니다.
-
-**웹의 인터랙션부터 백엔드 API, 3D 공간까지 연결하는 풀스택 개발자입니다.**
-
-주식 시세와 AI 분석을 보여주는 화면, 체형에 맞는 스타일을 탐색하는 서비스, 책과 취향을 담는 3D 책장을 만들었습니다. React·Next.js·Vue로 사용자 흐름을 구현하고, Java·Spring과 데이터 저장소를 연결하며, Unity·C#으로 웹 밖의 인터랙션도 만들어갑니다.
-
-화면 하나를 구현할 때도 **인증, 데이터 흐름, 로딩과 실패 상태까지** 함께 고민합니다.
-
 <br />
 
 ## Selected work
 
-<p>
-  <a href="https://github.com/beshurl/SallaeMallae"><img src="./assets/project-sallaemallae.svg" width="400" alt="살래말래 — 시세·뉴스·AI 분석을 통합하는 주식 분석 서비스. Next.js, Spring, Redis." /></a>
-  <a href="https://github.com/beshurl/BoneToBe"><img src="./assets/project-bonetobe.svg" width="400" alt="Bone To Be — 골격 인식 기반 의류 추천 서비스. React, TypeScript, Motion." /></a>
-  <a href="https://github.com/beshurl/DotShelf"><img src="./assets/project-dotshelf.svg" width="400" alt="DotShelf — 책과 취향을 담는 Unity 3D 책장 서비스. Unity, C#, Spring." /></a>
-  <a href="https://github.com/Sequence-Front/sequence"><img src="./assets/project-sequence.svg" width="400" alt="Sequence — 대학생 개발자·디자이너를 위한 프로젝트 협업 플랫폼. React, TypeScript, Recoil." /></a>
-</p>
+### [살래말래](https://github.com/beshurl/SallaeMallae)
 
-<details open>
-<summary><b>프로젝트에서 제가 맡은 일</b></summary>
+시세·뉴스·재무 데이터와 AI 분석 결과를 한 화면에서 확인하는 주식 분석 서비스.
 
-#### [살래말래](https://github.com/beshurl/SallaeMallae) · Frontend & Backend
+<a href="./assets/screenshots/sallaemallae-signals.png"><img src="./assets/screenshots/sallaemallae-signals.png" width="100%" alt="살래말래 실제 매매신호 화면 — 시가총액·섹터 필터, KOSPI 200 종목 목록, 매수 신호와 AI 신뢰도" /></a>
+
+<sub>매매신호 종합 화면 · 이미지를 누르면 원본 크기로 볼 수 있습니다.</sub>
+
+**담당** &nbsp; 주요 화면·API 연동, KIS 주식 시세 API, Redis 캐시<br />
+**기술** &nbsp; Next.js · TypeScript · TanStack Query · Zustand · Spring Boot · Redis
+
+<details>
+<summary><b>종목 상세 화면과 구현 내용 더 보기</b></summary>
+
+<a href="./assets/screenshots/sallaemallae-stock-detail.png"><img src="./assets/screenshots/sallaemallae-stock-detail.png" width="100%" alt="살래말래 실제 종목 상세 화면 — 주가 차트, 관련 뉴스, 투자 지표와 분기 실적" /></a>
 
 - 메인, 종목 목록·상세, 포트폴리오, 뉴스, 검색, 알림 화면과 API 연동
 - OAuth, 프로필 이미지 업로드, 인기 검색어 SSE와 캐시·로딩 UX 개선
-- **KIS 기반 주식 조회·실시간 시세 API**, **Redis Top-list 캐시** 구현
+- KIS 기반 주식 조회·실시간 시세 API, Redis Top-list 캐시 구현
 
-#### [Bone To Be](https://github.com/beshurl/BoneToBe) · Frontend
+</details>
 
-- 회원가입·로그인·소셜 인증부터 프로필·마이페이지까지 사용자 흐름 구현
-- 커뮤니티, 사용자 검색, 알림 기능과 API 연동
-- **메인 화면 애니메이션**과 인터랙티브한 서비스 소개 구현
+<br />
 
-#### [DotShelf](https://github.com/beshurl/DotShelf) · Unity & Backend Integration
+### [My Job Calendar](https://github.com/shipleaf/ITcampus_front)
 
-- **Unity UI Toolkit** 기반 책장·노트북·책 시장 UI와 API 연동
-- 씬 분리, UI 지연 로딩, 원격 에셋 캐시와 다른 사용자의 공간 방문 UX
-- Spring 기반 **S3 Presigned URL 썸네일 업로드 API**, 스킨·책장 상태 동기화
+취업공고·학생지원사업·자격증 일정을 모아 보고, 필요한 정보를 스크랩하는 캘린더 서비스.
 
-#### [Sequence](https://github.com/Sequence-Front/sequence) · Frontend
+<a href="./assets/screenshots/my-job-calendar.png"><img src="./assets/screenshots/my-job-calendar.png" width="100%" alt="My Job Calendar 실제 서비스 화면 — 취업공고·지원 프로그램·자격증 일정을 보여주는 월간 캘린더" /></a>
 
-- 대학생 개발자·디자이너의 프로젝트 모집·협업 플랫폼 프론트엔드 참여
-- React·TypeScript·Recoil·styled-components 기반 화면, 스타일 개선과 QA
+<sub>전체 달력 화면 · 프로젝트 README에 수록된 발표 자료</sub>
+
+**담당** &nbsp; 프론트엔드 개발 참여<br />
+**기술** &nbsp; React · Recoil · styled-components · FullCalendar<br />
+**팀 수상** &nbsp; SW융합클러스터 2.0 디지털 콘텐츠 DX 해커톤 우수상
+
+<details>
+<summary><b>스크랩·Google Calendar 연동 화면 더 보기</b></summary>
+
+<a href="./assets/screenshots/my-job-calendar-scrap.png"><img src="./assets/screenshots/my-job-calendar-scrap.png" width="100%" alt="My Job Calendar 개인 캘린더 화면 — 스크랩한 일정과 Google Calendar 동기화 버튼" /></a>
+
+관심 있는 정보를 스크랩하고, 개인 캘린더에서 확인하거나 Google Calendar와 동기화할 수 있습니다.
 
 </details>
 
@@ -166,21 +169,24 @@ AI 프로젝트에서는 모델의 결과를 사용자가 이해하고 활용할
 
 ## Beyond the featured
 
+**[DotShelf](https://github.com/beshurl/DotShelf)** &nbsp; `Unity` `C#` `Spring Boot`
+<br />책과 취향을 담는 3D 책장. UI Toolkit, 씬 분리·지연 로딩, 원격 에셋 캐시와 S3 업로드 API 연동.
+
+**[Bone To Be](https://github.com/beshurl/BoneToBe)** &nbsp; `React` `TypeScript` `styled-components`
+<br />골격 인식 기반 의류 추천 서비스. 인증·프로필·커뮤니티 UI, API 연동과 메인 화면 애니메이션 담당.
+
+**[Sequence](https://github.com/Sequence-Front/sequence)** &nbsp; `React` `TypeScript` `Recoil`
+<br />대학생 개발자·디자이너의 프로젝트 협업 플랫폼. 프론트엔드 개발, 스타일 개선과 QA 참여.
+
 **[GateStamp](https://github.com/beshurl/skala-temp-for-gain)** &nbsp; `Next.js` `Spring Boot` `Docker`
 <br />공인 IP 검증과 당일 중복 확인을 적용한 출석 서비스.
 
 **[WAYTHER](https://github.com/beshurl/skala-vue)** &nbsp; `Vue` `Pinia` `PrimeVue`
 <br />날씨와 관광 정보를 연결해 방문 순서와 준비물을 제안하는 여행 서비스.
 
-**[My Job Calendar](https://github.com/shipleaf/ITcampus_front)** &nbsp; `React` `Recoil` `FullCalendar`
-<br />취업·학생지원·자격증 정보를 모아 관리하는 캘린더. 프론트엔드 참여.
-<br /><sub>팀 수상 · SW융합클러스터 2.0 디지털 콘텐츠 DX 해커톤 우수상</sub>
-
 **[이걸주네?](https://github.com/beshurl/igeoljune)** &nbsp; `Vue` `Spring Boot` `PostgreSQL`
 <br />취향·관계·예산 기반 선물 추천 프로젝트. Git 운영·코드 리뷰·통합과 파트 보조 담당.
 
 <br />
 
-<a href="https://github.com/beshurl?tab=repositories"><img src="./assets/footer.svg" width="100%" alt="More ideas. More things to build. — beshurl의 모든 저장소 보기" /></a>
-
-<p align="center"><sub>Designed around the things I build. · <a href="./.github/profile/SOURCES.md">Design &amp; source notes</a></sub></p>
+[모든 저장소 보기 →](https://github.com/beshurl?tab=repositories)

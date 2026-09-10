@@ -1,69 +1,37 @@
----
-name: beshurl — Build across the stack
-description: A cobalt portfolio with a modular three-layer signature and project-specific artwork.
-colors:
-  primary: "#244DE8"
-  navy: "#1B2440"
-  peach: "#F2BA9B"
-  lilac: "#E8EAFE"
-  mint: "#DFF4ED"
-  paper: "#F4F6FF"
-typography:
-  display:
-    fontFamily: "Arial, Helvetica, sans-serif"
-    fontWeight: 700
-  body:
-    fontFamily: "Arial, Apple SD Gothic Neo, Malgun Gothic, sans-serif"
-    fontWeight: 400
-rounded:
-  panel: "16px"
-  badge: "7px"
-spacing:
-  small: "8px"
-  medium: "24px"
-  large: "40px"
----
+# Design: beshurl GitHub profile
 
 ## Overview
 
-**Creative North Star: "Build across the stack."**
-
-A personal engineering portfolio within GitHub's native reading surface. Cobalt carries the first viewport; a peach accent echoes the owner's existing avatar. Offset layers connect the web, backend, and 3D disciplines. Project art is authored for the actual subjects: stock analysis, clothing, books, and collaboration.
-
-The user asked to replace the basic appearance with a richer profile referencing accomplished README compositions. The layout borrows category conventions—project links, categorized tools, expandable detail—while its graphic language is original.
+Actual work leads. The owner explicitly requested real service screens from project READMEs and rejected the previous illustration covers. The native GitHub surface, restrained introduction, and full-width project screenshots form the profile.
 
 ## Colors
 
-Cobalt and paper create the signature header. Peach, lilac, and mint distinguish project covers. Navy carries labels and badge surfaces. Body content inherits GitHub's selected theme.
+Body content inherits GitHub's selected light or dark theme. Screenshots retain their original pixels, colors, borders, and any existing presentation headings. Local technology badges retain the navy background (#1B2440) and light labels (#F4F6FF).
 
 ## Typography
 
-Large, bold sans-serif display type is used inside SVGs for portable rendering. Korean body text has explicit system fallbacks. The body remains native GitHub text; image alt text preserves identity and project descriptions when images are unavailable.
+Use native GitHub headings and body text for names, descriptions, technologies, responsibilities, and links. No rasterized or SVG display headline.
 
 ## Layout
 
-The hero has separate desktop and mobile compositions. Project covers are 400px wide inside a wrapping paragraph, producing two columns in the 846px desktop README and one column on a phone. Badge images wrap individually. Long personal-contribution and project-system notes use native disclosures. Avoid wide tables with long prose.
-
-## Elevation & Depth
-
-Depth comes from offset solid layers and isometric book geometry. No shadow or blur is needed. The profile is static, with a single subtle header signal animation disabled by prefers-reduced-motion.
+Compact identity and introduction, then a showcase of two projects with actual screenshots, the categorized technology inventory, and concise text-only entries for other projects. Each screenshot uses the available README width and preserves its original aspect ratio. Additional screens sit inside native details elements.
 
 ## Shapes
 
-Header and covers have 16px corners. Modular rectangles, cut corners, and a three-layer stack define the authored artwork. Badge corners are 7px.
+No invented project covers or surrounding decorative frames. Native GitHub links, headings, disclosures and wrapping badges establish the layout.
 
 ## Components
 
-- Hero: 960×380 desktop; 600×540 mobile, selected with picture media.
-- Project covers: 480×300 SVGs, native links, full descriptions in alt text and text disclosures.
-- Technology badge: self-contained local SVG with a logo or readable abbreviation, 32px high.
-- Closing strip: compact repository link with an original layered mark.
+- Project showcase: linked title, one-sentence description, full-width screenshot, concise role and stack.
+- Screenshot: unmodified local PNG, descriptive alt text, a link to view its full-resolution original.
+- Secondary screenshot: native disclosure, collapsed initially.
+- Technology badge: self-contained local SVG, 32px tall, individually wrapping.
+- Text-only project: project link, stack and one concise responsibility description.
 
 ## Do's and Don'ts
 
-- Do keep names, descriptions, and contributions traceable to public project evidence.
-- Do keep the first viewport focused on the owner's identity and work.
-- Do test GitHub's actual rendering at desktop and phone widths.
-- Do preserve readable native prose alongside decorative assets.
-- Don't present team-wide ML or infrastructure tools as individual mastery.
-- Don't add unsupported experience bars, ratings, or contribution statistics.
+- Do use only existing actual application screens from the linked project README.
+- Do preserve original image proportions and publish source links in .github/profile/SOURCES.md.
+- Do omit imagery for projects without screenshots.
+- Do check desktop and mobile rendering, disclosure expansion and image links.
+- Don't fabricate a UI screenshot or substitute artwork, diagrams, textures, or logos as a project screen.

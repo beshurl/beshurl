@@ -9,7 +9,20 @@ Reviewed 2026-09-10. Only public repository information is used. Dependencies de
 - [abhisheknaiidu/abhisheknaiidu](https://github.com/abhisheknaiidu/abhisheknaiidu): inspected as an additional profile reference.
 - [GitHub's README formatting guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github): picture, links, and disclosure support.
 
-The header, project covers, layout copy, and closing artwork are original. No reference profile artwork or source layout was copied. Brand-logo licensing is recorded under assets/vendor.
+The owner rejected the custom illustration covers and requested actual screens from project READMEs. The former hero, project illustrations, and closing banner were removed. The profile now leads with native text and actual screenshots. Brand-logo licensing is recorded under assets/vendor.
+
+## Screenshots
+
+All four local PNGs are unchanged copies of images already embedded in the linked project READMEs. They are documentation screenshots, not a representation of the services' current live state. My Job Calendar images are existing presentation slides containing the actual application UI, preserved with their original headers and borders.
+
+| Local file | Original source | Dimensions |
+| --- | --- | --- |
+| assets/screenshots/sallaemallae-signals.png | [SallaeMallae: AI 매매 신호](https://raw.githubusercontent.com/beshurl/SallaeMallae/master/imgaes/05_signals_full.png) | 1440 × 1026 |
+| assets/screenshots/sallaemallae-stock-detail.png | [SallaeMallae: 종목 상세](https://raw.githubusercontent.com/beshurl/SallaeMallae/master/imgaes/06_1_stock_detail_full.png) | 1440 × 1820 |
+| assets/screenshots/my-job-calendar.png | [My Job Calendar README image 2](https://github.com/user-attachments/assets/9dfa820b-ca01-411d-bb85-210b2e1a93f2) | 1920 × 1080 |
+| assets/screenshots/my-job-calendar-scrap.png | [My Job Calendar README image 3](https://github.com/user-attachments/assets/296c5e5d-f374-4864-90f7-13d96713c927) | 1920 × 1080 |
+
+Screenshot-bearing READMEs: [SallaeMallae](https://github.com/beshurl/SallaeMallae/blob/master/README.md), [My Job Calendar](https://github.com/shipleaf/ITcampus_front/blob/develop/README.md). Inspected README files for BoneToBe, DotShelf, and Sequence did not contain actual service screenshots; these projects remain text-only. No texture, icon, research-demo image, or generated mockup is substituted.
 
 ## Personal contributions
 
@@ -46,4 +59,4 @@ Personal work: [book-market UI/API](https://github.com/beshurl/DotShelf/commit/7
 
 ## Updating the profile
 
-Edit README.md for content. Run `node scripts/build-profile-assets.mjs` for authored cover art, and `node scripts/build-badges.mjs` for badges. Preview with `node scripts/preview.mjs`, then inspect the actual GitHub profile after publishing. No scheduled jobs, account secrets, third-party statistics services, or application deployments are required.
+Edit README.md for content. Keep screenshot files unchanged and update their source links here when replacing them. Run `node scripts/build-badges.mjs` for badges. Preview with `node scripts/preview.mjs`, then inspect the actual GitHub profile after publishing. No scheduled jobs, account secrets, third-party statistics services, or application deployments are required.

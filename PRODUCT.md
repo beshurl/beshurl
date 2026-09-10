@@ -8,7 +8,7 @@ web
 
 ## Product Purpose
 
-GitHub profile README for Jeong Jun Yong (정준용), username beshurl. The owner requested a more individual, visually developed profile informed by accomplished GitHub profiles and a substantially fuller technology inventory.
+GitHub profile README for Jeong Jun Yong (정준용), username beshurl. The owner requested a more individual profile and a substantially fuller technology inventory. The latest correction explicitly requests actual service screenshots from project READMEs, omitting images when no screen exists.
 
 ## Users
 
@@ -16,7 +16,7 @@ Visitors to the public GitHub profile. Working assumption: fellow developers, co
 
 ## Positioning
 
-Existing public bio identifies a full-stack developer. Public source and author-attributed contributions show web frontend, Java/Spring API integration, and Unity/C# 3D interaction work. Preserve this breadth. The optional question about a preferred emphasis remains open until the owner answers.
+Existing public bio identifies a full-stack developer. Public source and author-attributed contributions show web frontend, Java/Spring API integration, and Unity/C# 3D interaction work. Preserve this breadth.
 
 ## Capabilities and Constraints
 
@@ -31,4 +31,5 @@ Public README files, dependency manifests, and author-attributed commits. See [.
 - Give visitors a recognizable identity and direct paths to real work.
 - Describe personal contributions concretely.
 - Make the technology inventory broad, categorized, and defensible.
-- Keep decorative assets in the repository so their rendering does not depend on badge or statistics services.
+- Show actual project screens, with no substitute illustrations for missing screenshots.
+- Preserve screenshot originals in the repository with their source links. Keep technical badges local.
