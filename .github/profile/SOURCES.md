@@ -74,7 +74,17 @@ DotShelf contains team-authored SwiftUI/RealityKit/Metal and an iOS Apple-login 
 
 Main dependencies: [Sallae frontend](https://github.com/beshurl/SallaeMallae/blob/master/services/frontend/package.json), [Sallae backend](https://github.com/beshurl/SallaeMallae/blob/master/services/backend/pom.xml), [Bone frontend](https://github.com/beshurl/BoneToBe/blob/master/frontend/package.json), [DotShelf Unity](https://github.com/beshurl/DotShelf/blob/master/frontend/Packages/manifest.json), [DotShelf backend](https://github.com/beshurl/DotShelf/blob/master/backend/build.gradle.kts), [Sequence](https://github.com/Sequence-Front/sequence/blob/main/package.json).
 
-The broader collapsed inventory also reflects [GateStamp](https://github.com/beshurl/skala-temp-for-gain), [WAYTHER](https://github.com/beshurl/skala-vue), [Python pipeline](https://github.com/beshurl/SKALA_DAY1_Pipeline), and [O2O service](https://github.com/beshurl/o2oMarketService) dependencies inspected earlier. Their presence is evidence of project use, not a proficiency rating. Team-level AI systems are explicitly separated from personal responsibilities. Kotlin/Compose and Swift/SwiftUI now have a dedicated Mobile & Native category, grounded in the implemented GateStamp prototypes described above.
+The broader collapsed inventory also reflects [GateStamp](https://github.com/beshurl/skala-temp-for-gain), [WAYTHER](https://github.com/beshurl/skala-vue), [Python pipeline](https://github.com/beshurl/SKALA_DAY1_Pipeline), and [O2O service](https://github.com/beshurl/o2oMarketService) dependencies inspected earlier. Their presence is evidence of project use, not a proficiency rating. Kotlin/Compose and Swift/SwiftUI remain visible in the primary stack summary and have separate Android/iOS groups in the full inventory. The owner subsequently removed the supplemental library/service and team-level AI system sections; they must not be restored.
+
+## Profile structure references
+
+The 2026-09-10 redesign uses structural ideas, not copied content or assets, from these public profiles:
+
+- [antfu](https://github.com/antfu/antfu): concise text-link navigation. Adapted as three local anchors into this README.
+- [bradgarropy](https://github.com/bradgarropy/bradgarropy): a short role-led introduction. The profile retains the owner's own name, scope and projects.
+- [posva](https://github.com/posva/posva): minimal identity and purposeful links. Used as a clarity reference, not as evidence of this owner's experience.
+
+The native project index is original to this profile. All five personal-role records, eleven troubleshooting cases and their evidence links remain in independently expandable sections. Previously displayed technology badges are replaced by accessible text; the original SVG files are retained in the repository. No banner, statistics widget, generated project cover or screenshot is reintroduced.
 
 ## Maintenance
 
