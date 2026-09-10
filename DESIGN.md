@@ -14,7 +14,7 @@ Native GitHub headings, body text, code spans for identifiers and tools, and bri
 
 ## Layout
 
-Compact introduction, four major project sections, and a collapsed technology inventory. Each project has a short product description, a stack line, personal-role bullets, and two or three troubleshooting cases. Each case states the code-level cause and implemented correction and links to its source. Use normal-width prose, not a wide problem/solution table.
+Compact introduction, five major project sections (including a visible Android & iOS project), and a collapsed technology inventory. Each project has a short product description, a stack line, personal-role bullets, and two or three troubleshooting cases. Each case states the code-level cause and implemented correction and links to its source. Use normal-width prose, not a wide problem/solution table. Native mobile has its own technology category rather than a nested exploration footnote.
 
 ## Components
 

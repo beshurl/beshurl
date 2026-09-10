@@ -8,7 +8,7 @@ web
 
 ## Product Purpose
 
-GitHub profile README for Jeong Jun Yong (정준용), username beshurl. The latest request supersedes screenshots: remove both screenshot showcases and show only the major projects, personal responsibilities, and real troubleshooting.
+GitHub profile README for Jeong Jun Yong (정준용), username beshurl. Remove both screenshot showcases and show the major projects, personal responsibilities, and real troubleshooting. The latest follow-up requests visible mobile experience, not merely a buried technology mention.
 
 ## Users
 
@@ -16,11 +16,11 @@ Visitors reviewing the developer's work, collaborators, and prospective employer
 
 ## Positioning
 
-Full-stack development across web frontend, Java/Spring API integration, and Unity/C# 3D interaction. Ground personal ownership in author-attributed commits and project responsibility records.
+Full-stack development across web frontend, Android/Kotlin/Compose and iOS/Swift/SwiftUI native prototypes, Java/Spring API integration, and Unity/C# 3D interaction. Ground personal ownership in author-attributed commits and project responsibility records.
 
 ## Capabilities and Constraints
 
-Use native GitHub Markdown and disclosure elements. No screenshots, project-cover illustrations, or decorative hero. Focus the project list on SallaeMallae, BoneToBe, DotShelf, and Sequence, the substantial projects established in this conversation. Keep the broader requested technology inventory secondary in a collapsed disclosure.
+Use native GitHub Markdown and disclosure elements. No screenshots, project-cover illustrations, or decorative hero. Focus the project list on SallaeMallae, BoneToBe, DotShelf, GateStamp (native mobile), and Sequence. GateStamp is explicitly a prototype, not an app-store release claim. Keep the broader requested technology inventory secondary in a collapsed disclosure with a dedicated Mobile & Native category.
 
 ## Evidence on Hand
 

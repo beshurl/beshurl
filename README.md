@@ -1,9 +1,9 @@
 <!-- Role and troubleshooting evidence: .github/profile/SOURCES.md. -->
 # 정준용 · Jeong Jun Yong
 
-**Full-Stack Developer** · Web / Backend / 3D
+**Full-Stack Developer** · Web / Mobile / Backend / 3D
 
-웹 UI와 API, 데이터 흐름을 연결하고 Unity로 3D 인터랙션을 만듭니다. 주요 프로젝트에서 직접 맡은 일과 문제를 해결한 과정을 정리했습니다.
+웹 UI와 API, 데이터 흐름을 연결하고 Android·iOS 네이티브 앱과 Unity 기반 3D 인터랙션을 만듭니다. 주요 프로젝트에서 직접 맡은 일과 문제를 해결한 과정을 정리했습니다.
 
 ## 주요 프로젝트
 
@@ -66,6 +66,25 @@ AI 분석 결과와 시세·뉴스·재무 데이터를 통합하는 주식 분�
 
 <br />
 
+### [GateStamp · Android & iOS](https://github.com/beshurl/skala-temp-for-gain)
+지정된 네트워크에서 하루 한 번 출석을 기록하는 서비스의 네이티브 앱 프로토타입.
+
+`Kotlin` `Jetpack Compose` `Material 3` `Swift` `SwiftUI` `Retrofit` `URLSession`
+
+**내가 맡은 일**
+
+- **Android** — Compose로 로그인·출석·기록 화면과 상태별 안내를 구현했습니다. Retrofit/OkHttp로 API를 연결하고, Android Keystore 키로 토큰을 암호화해 저장했습니다.
+- **iOS** — SwiftUI 화면과 NavigationStack 기반 탐색, URLSession API 연동, Keychain 기반 세션 복원·로그아웃을 구현했습니다.
+- 화면 상태와 Repository·네트워크·토큰 저장소를 분리했습니다. 출석 가능 여부는 서버가 판정하게 하고, 중복 출석·허용되지 않은 IP·인증 만료에 맞춰 앱의 안내와 복구 흐름을 구분했습니다.
+
+**트러블슈팅**
+
+- **모바일 출석 시계에 날짜까지 표시되는 문제** — 서버의 `displayTime`을 그대로 표시해 시계 영역에 날짜와 요일이 함께 들어갔습니다. Android·iOS 각각에서 `HH:mm:ss`를 추출하고, 추출할 수 없으면 `checkedInAt`을 한국 표준시로 변환하도록 수정했습니다. 잘못된 값은 고정된 대체 표시로 처리하고 양쪽 앱에 회귀 테스트를 추가했습니다. [수정·테스트](https://github.com/beshurl/skala-temp-for-gain/commit/d1e268ee68ab9edd29a8caed306747ead7e2cb5e)
+
+- **로그아웃 후 재로그인했을 때 늦게 도착하는 이전 응답에 대한 대응** — iOS 출석 요청이 끝나기 전에 로그아웃할 수 있어, 응답을 적용하기 전 세션 확인이 필요했습니다. 요청 시점의 세션 세대 번호를 기록하고, 현재 세션과 다르면 결과·오류를 반영하지 않도록 구현했습니다. 이전 응답이 새 화면을 덮어쓰거나 새 세션을 만료시키지 않는지 확인하는 테스트를 작성했습니다. [구현](https://github.com/beshurl/skala-temp-for-gain/blob/d1e8ab3e9ef9a24d28d2bf2afd9272fdc5fbe2ce/ios/GateStamp/Features/Attendance/AttendanceViewModel.swift#L42) · [회귀 테스트](https://github.com/beshurl/skala-temp-for-gain/blob/d1e8ab3e9ef9a24d28d2bf2afd9272fdc5fbe2ce/ios/GateStampTests/Features/Attendance/AttendanceViewModelTests.swift#L67)
+
+<br />
+
 ### [Sequence](https://github.com/Sequence-Front/sequence)
 대학생 개발자·디자이너를 위한 프로젝트 모집·협업 플랫폼.
 
@@ -119,6 +138,17 @@ AI 분석 결과와 시세·뉴스·재무 데이터를 통합하는 주식 분�
   <img src="./assets/tech/recoil.svg" alt="Recoil" />
 </p>
 
+**Mobile & Native · Android / iOS**
+
+<p>
+  <img src="./assets/tech/kotlin.svg" alt="Kotlin" />
+  <img src="./assets/tech/jetpack-compose.svg" alt="Jetpack Compose" />
+  <img src="./assets/tech/swift.svg" alt="Swift" />
+  <img src="./assets/tech/swiftui.svg" alt="SwiftUI" />
+</p>
+
+Material 3 · Retrofit / OkHttp · URLSession · NavigationStack · Android Keystore · Keychain
+
 **Backend & database**
 
 <p>
@@ -170,8 +200,6 @@ AI 분석 결과와 시세·뉴스·재무 데이터를 통합하는 주식 분�
 - **Storage & deployment** — AWS S3·EC2, MinIO, MariaDB, H2, Docker Compose, Caddy
 - **3D tooling** — Addressables, Cinemachine, URP, glTFast
 - **Python & quality** — pandas, Pydantic, HTTPX, PyArrow, pytest, Ruff, Testing Library, MSW, ESLint, Prettier, Maven, Gradle
-
-**프로토타입에서 시도한 기술** — Kotlin·Jetpack Compose, Swift·SwiftUI도 탐색했습니다.
 
 </details>
 

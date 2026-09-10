@@ -25,6 +25,10 @@ Regenerate with `node scripts/build-badges.mjs`. Existing vendored source files 
 | Zustand | [icons/zustand/zustand-original.svg](https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/zustand/zustand-original.svg) |
 | Pinia | Custom initials mark; not an official logo. |
 | Recoil | Custom initials mark; not an official logo. |
+| Kotlin | [icons/kotlin/kotlin-original.svg](https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/kotlin/kotlin-original.svg) |
+| Jetpack Compose | [icons/jetpackcompose/jetpackcompose-original.svg](https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/jetpackcompose/jetpackcompose-original.svg) |
+| Swift | [icons/swift/swift-original.svg](https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/swift/swift-original.svg) |
+| SwiftUI | Custom initials mark; not an official logo. |
 | Spring Boot | [icons/spring/spring-original.svg](https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/spring/spring-original.svg) |
 | Spring Security | [icons/spring/spring-original.svg](https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/spring/spring-original.svg) |
 | JPA | Custom initials mark; not an official logo. |

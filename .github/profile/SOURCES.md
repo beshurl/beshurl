@@ -1,6 +1,6 @@
 # Profile evidence
 
-Updated 2026-09-10. The owner requested a photo-free profile centered on major projects, personal contributions, and troubleshooting. Screenshots and minor-project listings were removed. The technology inventory remains collapsed to preserve the earlier request for fuller stack coverage.
+Updated 2026-09-10. The owner requested a photo-free profile centered on major projects, personal contributions, and troubleshooting. Screenshots and minor-project listings were removed. The latest follow-up adds visible Android/iOS experience through GateStamp, not a nested exploration footnote. The technology inventory remains collapsed to preserve the earlier request for fuller stack coverage.
 
 ## Evidence standard
 
@@ -41,6 +41,24 @@ Each troubleshooting case below is based on the owner's public commit, implement
 - [Public-space remote assets](https://github.com/beshurl/DotShelf/commit/ce997ac0fe4607d72c564df5482d9226814a4f24), [design and verification record](https://github.com/beshurl/DotShelf/blob/master/docs/study/2026-05-13-feat-unity-remote-asset-cache.md): owner-only download access did not match visitor restoration. Add a public-space manifest restricted to saved layout references and the space owner's asset ownership; register it before Unity restores the layout; use version/hash caches for GLB/AssetBundle content. The record reports targeted backend and Unity EditMode checks; real S3/multiple-account end-to-end verification was still a follow-up, so the profile does not claim full live-service validation.
 - [Thumbnail upload retries](https://github.com/beshurl/DotShelf/commit/97670a916d4dbebd7d49920002d7acb15a371b17): next-layout-version keys collided before confirmation, and confirmation retries incremented the version again. Timestamp/UUID keys, same-key idempotency, and stale-key rejection were introduced. [Regression tests](https://github.com/beshurl/DotShelf/blob/97670a916d4dbebd7d49920002d7acb15a371b17/backend/src/test/java/com/dotshelf/domain/space/service/SpaceServiceTest.java) cover unique keys, repeated confirmation, and older keys. No operational incident frequency is claimed.
 
+## GateStamp — native Android and iOS
+
+### Personal role and scope
+
+[Initial implementation](https://github.com/beshurl/skala-temp-for-gain/commit/d1e8ab3e9ef9a24d28d2bf2afd9272fdc5fbe2ce) is authored by 정준용 / beshurl. The Android and iOS client sources and tests are included. The current [root README](https://github.com/beshurl/skala-temp-for-gain) describes mobile feature development as paused while web/server Slack registration evolves. The profile calls these native prototypes; it does not claim app-store publication, production adoption, or native support for the newer Slack signup flow.
+
+- [Android structure](https://github.com/beshurl/skala-temp-for-gain/blob/HEAD/android/README.md): Kotlin, Jetpack Compose, Material 3, Retrofit/OkHttp, ViewModel/Repository boundaries, manual DI, state-specific attendance guidance. [SecureTokenStore](https://github.com/beshurl/skala-temp-for-gain/blob/HEAD/android/app/src/main/java/com/gatestamp/android/core/storage/SecureTokenStore.kt) uses an Android Keystore AES-GCM key to encrypt the token; ciphertext and IV are stored in private SharedPreferences with backup exclusion and checked persistence failures. The token itself is not described as directly residing in Keystore.
+- [iOS structure](https://github.com/beshurl/skala-temp-for-gain/blob/HEAD/ios/README.md): Swift/SwiftUI, typed NavigationStack routing, URLSession transport, protocol-based repository boundaries, Keychain storage and session restoration/logout. Attendance authorization and source-IP decisions remain server-side.
+
+### Troubleshooting
+
+- [Mobile time display correction](https://github.com/beshurl/skala-temp-for-gain/commit/d1e268ee68ab9edd29a8caed306747ead7e2cb5e), authored by beshurl: the receipt/history displayed the full server displayTime string, including date/day. Android and iOS now extract a clock value, fall back to checkedInAt in Asia/Seoul, and display --:--:-- for unusable inputs. Android AttendanceClockTimeTest and iOS AttendanceTimeFormatterTests were added. No measured layout improvement or test execution in this profile-editing task is claimed.
+- [iOS response generation guard](https://github.com/beshurl/skala-temp-for-gain/blob/d1e8ab3e9ef9a24d28d2bf2afd9272fdc5fbe2ce/ios/GateStamp/Features/Attendance/AttendanceViewModel.swift#L42): capture generation at request start; reject old success/error responses; reset increments generation. [RootView](https://github.com/beshurl/skala-temp-for-gain/blob/d1e8ab3e9ef9a24d28d2bf2afd9272fdc5fbe2ce/ios/GateStamp/App/RootView.swift#L15) invokes reset on signedOut. [Regression tests](https://github.com/beshurl/skala-temp-for-gain/blob/d1e8ab3e9ef9a24d28d2bf2afd9272fdc5fbe2ce/ios/GateStampTests/Features/Attendance/AttendanceViewModelTests.swift#L67) cover old check-in results, old authentication errors, and old load results. This is defensive implementation, not a claimed production account-isolation incident.
+
+### Attribution exclusions
+
+DotShelf contains team-authored SwiftUI/RealityKit/Metal and an iOS Apple-login bridge, but their inspected commits are attributed to other contributors, not beshurl. They are not added as personal native skills or personal troubleshooting achievements. React Native, Expo, and Flutter were not evidenced in the reviewed public repositories.
+
 ## Sequence
 
 ### Personal role
@@ -56,7 +74,7 @@ Each troubleshooting case below is based on the owner's public commit, implement
 
 Main dependencies: [Sallae frontend](https://github.com/beshurl/SallaeMallae/blob/master/services/frontend/package.json), [Sallae backend](https://github.com/beshurl/SallaeMallae/blob/master/services/backend/pom.xml), [Bone frontend](https://github.com/beshurl/BoneToBe/blob/master/frontend/package.json), [DotShelf Unity](https://github.com/beshurl/DotShelf/blob/master/frontend/Packages/manifest.json), [DotShelf backend](https://github.com/beshurl/DotShelf/blob/master/backend/build.gradle.kts), [Sequence](https://github.com/Sequence-Front/sequence/blob/main/package.json).
 
-The broader collapsed inventory also reflects [GateStamp](https://github.com/beshurl/skala-temp-for-gain), [WAYTHER](https://github.com/beshurl/skala-vue), [Python pipeline](https://github.com/beshurl/SKALA_DAY1_Pipeline), and [O2O service](https://github.com/beshurl/o2oMarketService) dependencies inspected earlier. Their presence is evidence of project use, not a proficiency rating. Team-level AI systems are explicitly separated from personal responsibilities. Kotlin/Compose and Swift/SwiftUI are labeled prototype exploration.
+The broader collapsed inventory also reflects [GateStamp](https://github.com/beshurl/skala-temp-for-gain), [WAYTHER](https://github.com/beshurl/skala-vue), [Python pipeline](https://github.com/beshurl/SKALA_DAY1_Pipeline), and [O2O service](https://github.com/beshurl/o2oMarketService) dependencies inspected earlier. Their presence is evidence of project use, not a proficiency rating. Team-level AI systems are explicitly separated from personal responsibilities. Kotlin/Compose and Swift/SwiftUI now have a dedicated Mobile & Native category, grounded in the implemented GateStamp prototypes described above.
 
 ## Maintenance
 
