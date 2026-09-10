@@ -1,62 +1,63 @@
-# Profile sources and maintenance
+# Profile evidence
 
-Reviewed 2026-09-10. Only public repository information is used. Dependencies describe technologies encountered in projects, not an assessed skill level.
+Updated 2026-09-10. The owner requested a photo-free profile centered on major projects, personal contributions, and troubleshooting. Screenshots and minor-project listings were removed. The technology inventory remains collapsed to preserve the earlier request for fuller stack coverage.
 
-## Design references
+## Evidence standard
 
-- [DenverCoder1/DenverCoder1](https://github.com/DenverCoder1/DenverCoder1): categorized tools and expandable supporting sections.
-- [anuraghazra/anuraghazra](https://github.com/anuraghazra/anuraghazra): direct introduction and emphasis on selected projects.
-- [abhisheknaiidu/abhisheknaiidu](https://github.com/abhisheknaiidu/abhisheknaiidu): inspected as an additional profile reference.
-- [GitHub's README formatting guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github): picture, links, and disclosure support.
+Each troubleshooting case below is based on the owner's public commit, implementation, or technical record. A code change does not by itself prove a production outage, measured performance gain, or a successful live deployment. No performance percentages, incident counts, or newly executed project tests are claimed. Tests mentioned in the profile were added in the cited commits; they were not rerun as part of editing this profile.
 
-The owner rejected the custom illustration covers and requested actual screens from project READMEs. The former hero, project illustrations, and closing banner were removed. The profile now leads with native text and actual screenshots. Brand-logo licensing is recorded under assets/vendor.
+## SallaeMallae
 
-## Screenshots
+### Personal role
 
-All four local PNGs are unchanged copies of images already embedded in the linked project READMEs. They are documentation screenshots, not a representation of the services' current live state. My Job Calendar images are existing presentation slides containing the actual application UI, preserved with their original headers and borders.
+[README 담당 파트](https://github.com/beshurl/SallaeMallae/blob/master/README.md) credits 정준용 with primary frontend screens, OAuth, popular-keyword SSE integration, KIS stock APIs, and Redis Top-list cache. AI model training and all server-side streaming infrastructure are not claimed as personal work.
 
-| Local file | Original source | Dimensions |
-| --- | --- | --- |
-| assets/screenshots/sallaemallae-signals.png | [SallaeMallae: AI 매매 신호](https://raw.githubusercontent.com/beshurl/SallaeMallae/master/imgaes/05_signals_full.png) | 1440 × 1026 |
-| assets/screenshots/sallaemallae-stock-detail.png | [SallaeMallae: 종목 상세](https://raw.githubusercontent.com/beshurl/SallaeMallae/master/imgaes/06_1_stock_detail_full.png) | 1440 × 1820 |
-| assets/screenshots/my-job-calendar.png | [My Job Calendar README image 2](https://github.com/user-attachments/assets/9dfa820b-ca01-411d-bb85-210b2e1a93f2) | 1920 × 1080 |
-| assets/screenshots/my-job-calendar-scrap.png | [My Job Calendar README image 3](https://github.com/user-attachments/assets/296c5e5d-f374-4864-90f7-13d96713c927) | 1920 × 1080 |
+### Troubleshooting
 
-Screenshot-bearing READMEs: [SallaeMallae](https://github.com/beshurl/SallaeMallae/blob/master/README.md), [My Job Calendar](https://github.com/shipleaf/ITcampus_front/blob/develop/README.md). Inspected README files for BoneToBe, DotShelf, and Sequence did not contain actual service screenshots; these projects remain text-only. No texture, icon, research-demo image, or generated mockup is substituted.
+- [News pagination reset](https://github.com/beshurl/SallaeMallae/commit/18481f416829d50e49a31a23c31034bd3959d4af): previous query data was lost between page-group requests. A missing total count became one total page and triggered a page clamp. Both news query variants now retain previous data with placeholderData. [Page logic](https://github.com/beshurl/SallaeMallae/blob/master/services/frontend/src/app/news/components/NewsPageClient.tsx).
+- [Authentication/cache synchronization](https://github.com/beshurl/SallaeMallae/commit/b3039b860193b66664d7b4a885d492322a6c3b1e): AuthQuerySync compares user ID or guest identity, skips restoration, and clears query data on an identity change. This is an isolation mechanism; no actual data-leak incident is asserted.
+- [Missing quotes during ranking fallback](https://github.com/beshurl/SallaeMallae/commit/08bdf207ef8fc30d3b1bd1b7d21236361e72894f): when ranking requests and local daily-price data are unavailable, fetch missing quotes only for the displayed page, preserve the original entry if enrichment fails, and add a test for the combined failure path.
 
-## Personal contributions
+## BoneToBe
 
-### SallaeMallae
+### Personal role
 
-[README, 담당 파트](https://github.com/beshurl/SallaeMallae/blob/master/README.md) explicitly credits 정준용 for primary frontend pages, OAuth, notifications, popular-keyword SSE, KIS stock APIs, and Redis Top-list cache.
+[OAuth](https://github.com/beshurl/BoneToBe/commit/e11a71d83aa11b551a76147ad59bbbc917c5df15), [profile/community API integration](https://github.com/beshurl/BoneToBe/commit/e072956f1e691ad41f0c1715005334609b8285b1), [profile editing](https://github.com/beshurl/BoneToBe/commit/ce899be61f8844e64d70f6b4b20582a5bafa71aa), [main-page animation](https://github.com/beshurl/BoneToBe/commit/c883cacee0c8b294aa8430b6274282d14a87eb5e).
 
-[Frontend manifest](https://github.com/beshurl/SallaeMallae/blob/master/services/frontend/package.json) documents Next.js, React, TypeScript, Tailwind CSS, TanStack Query, Zustand, ECharts, Motion, Radix, MSW, and Storybook. [Backend manifest](https://github.com/beshurl/SallaeMallae/blob/master/services/backend/pom.xml) documents Spring, JPA, Security, PostgreSQL, Redis, Flyway, and MinIO.
+### Troubleshooting
 
-### BoneToBe
+- [About-page infinite rendering](https://github.com/beshurl/BoneToBe/commit/01a931c49775df5434a74ce9229265b5c3db2bca): freshly mapped section ID arrays invalidated memoization and recreated observers/effects. A joined content key replaces array-reference dependencies.
+- [Photo data persistence](https://github.com/beshurl/BoneToBe/commit/e779dfe66b60ebe08898970f4ffd9672f25a862a): Zustand partialize excludes photoData and persists basic info, analysis results, and report ID. No observed QuotaExceededError or numerical storage reduction is claimed.
+- Supporting role evidence: [scroll-work scheduling](https://github.com/beshurl/BoneToBe/commit/b41217ae919b534efc37a400e8c2223c750b1c56) uses requestAnimationFrame and updates state only when changed; no FPS metric is asserted.
 
-[Service description](https://github.com/beshurl/BoneToBe/blob/master/README.md), [frontend manifest](https://github.com/beshurl/BoneToBe/blob/master/frontend/package.json).
+## DotShelf
 
-Author-attributed commits verify [OAuth](https://github.com/beshurl/BoneToBe/commit/e11a71d83aa11b551a76147ad59bbbc917c5df15) and [main-page animation](https://github.com/beshurl/BoneToBe/commit/c883cacee0c8b294aa8430b6274282d14a87eb5e). Additional beshurl commits 67011bd6, ce899be6, e072956f, 3a8487a9, 74b25366 verify profile, community, search, and notifications. AI inference, MediaPipe, Three.js and model training are project-level tools; individual ownership is not claimed.
+### Personal role
 
-### DotShelf
+[Book-market UI/API](https://github.com/beshurl/DotShelf/commit/79bb321c547a504b8b6bb0474f78f244d7cd121d), [lazy-loaded notebook UI](https://github.com/beshurl/DotShelf/commit/39a2e29c24edef8c364e140b464094e5076ffdee), [S3 thumbnail API](https://github.com/beshurl/DotShelf/commit/9c36a7676c62ddb7adafbfff9cc2c454cbd5bfa0).
 
-[Unity README](https://github.com/beshurl/DotShelf/blob/master/frontend/README.md), [Unity packages](https://github.com/beshurl/DotShelf/blob/master/frontend/Packages/manifest.json), [backend dependencies](https://github.com/beshurl/DotShelf/blob/master/backend/build.gradle.kts).
+### Troubleshooting
 
-Personal work: [book-market UI/API](https://github.com/beshurl/DotShelf/commit/79bb321c547a504b8b6bb0474f78f244d7cd121d), [asset caching and space visits](https://github.com/beshurl/DotShelf/commit/ce997ac0fe4607d72c564df5482d9226814a4f24), [S3 thumbnail API and tests](https://github.com/beshurl/DotShelf/commit/9c36a7676c62ddb7adafbfff9cc2c454cbd5bfa0). Commits b75e6446, b5094614, 529663f1 and 39a2e29c document Unity MVP, UI Toolkit, scene separation and lazy loading. WPF/Swift project directories do not establish individual proficiency.
+- [Public-space remote assets](https://github.com/beshurl/DotShelf/commit/ce997ac0fe4607d72c564df5482d9226814a4f24), [design and verification record](https://github.com/beshurl/DotShelf/blob/master/docs/study/2026-05-13-feat-unity-remote-asset-cache.md): owner-only download access did not match visitor restoration. Add a public-space manifest restricted to saved layout references and the space owner's asset ownership; register it before Unity restores the layout; use version/hash caches for GLB/AssetBundle content. The record reports targeted backend and Unity EditMode checks; real S3/multiple-account end-to-end verification was still a follow-up, so the profile does not claim full live-service validation.
+- [Thumbnail upload retries](https://github.com/beshurl/DotShelf/commit/97670a916d4dbebd7d49920002d7acb15a371b17): next-layout-version keys collided before confirmation, and confirmation retries incremented the version again. Timestamp/UUID keys, same-key idempotency, and stale-key rejection were introduced. [Regression tests](https://github.com/beshurl/DotShelf/blob/97670a916d4dbebd7d49920002d7acb15a371b17/backend/src/test/java/com/dotshelf/domain/space/service/SpaceServiceTest.java) cover unique keys, repeated confirmation, and older keys. No operational incident frequency is claimed.
 
-### Sequence
+## Sequence
 
-[About](https://github.com/Sequence-Front/sequence/blob/main/src/main/page/About.tsx), [team](https://github.com/Sequence-Front/sequence/blob/main/src/main/page/WhoMade.tsx), [manifest](https://github.com/Sequence-Front/sequence/blob/main/package.json). Jung Joon-yong is credited as a frontend team member. The product connects student developers and designers through team recruitment, project archives, portfolios, and team feedback.
+### Personal role
 
-## Additional projects and stack evidence
+[Team](https://github.com/Sequence-Front/sequence/blob/main/src/main/page/WhoMade.tsx) identifies Jung Joon-yong as frontend. [Feature integration](https://github.com/Sequence-Front/sequence/commit/90f92d5276d62d11376eb6141cd911f3199d60cd) modifies project/archive, team evaluation, notifications, reporting and auth flows. Referenced fixes are attributed to beshurl.
 
-- [GateStamp](https://github.com/beshurl/skala-temp-for-gain/blob/HEAD/README.md), [web manifest](https://github.com/beshurl/skala-temp-for-gain/blob/HEAD/web/package.json), [server manifest](https://github.com/beshurl/skala-temp-for-gain/blob/HEAD/server/build.gradle): attendance service, Next.js, Spring, Tailwind, RHF, Zod, Docker/Caddy, Playwright/Vitest/MSW. Kotlin/Compose and Swift/SwiftUI exist as paused prototypes, not core skills.
-- [WAYTHER](https://github.com/beshurl/skala-vue/blob/HEAD/README.md), [manifest](https://github.com/beshurl/skala-vue/blob/HEAD/package.json): weather-aware travel, Vue, Pinia, PrimeVue, Vite.
-- [My Job Calendar](https://github.com/shipleaf/ITcampus_front/blob/develop/README.md), [manifest](https://github.com/shipleaf/ITcampus_front/blob/develop/package.json): career-information calendar; team hackathon excellence award documented. React, Recoil, styled-components, FullCalendar.
-- [이걸주네?](https://github.com/beshurl/igeoljune/blob/HEAD/README.md), [backend manifest](https://github.com/beshurl/igeoljune/blob/HEAD/backend/pom.xml): gift-recommendation project; 정준용 is credited for DevOps & Integration, Git workflow, code review and supporting other areas. Do not claim production LLM recommendation: provider remains mocked.
-- [O2O service](https://github.com/beshurl/o2oMarketService/blob/HEAD/pom.xml): MyBatis/MySQL and Java/Spring.
-- [Python pipeline](https://github.com/beshurl/SKALA_DAY1_Pipeline/blob/HEAD/README.md), [requirements](https://github.com/beshurl/SKALA_DAY1_Pipeline/blob/HEAD/requirements.txt), [pyproject](https://github.com/beshurl/SKALA_DAY1_Pipeline/blob/HEAD/pyproject.toml): pandas, Pydantic, HTTPX, PyArrow, pytest, Ruff.
+### Troubleshooting
 
-## Updating the profile
+- [School-date payload](https://github.com/Sequence-Front/sequence/commit/8f74f60ebe7525228f1b150c5fc81af721be1a7d) converts school years to YYYY-01-01 strings. It is serialization of selected year precision, not discovery of actual month/day. [Date-entry QA](https://github.com/Sequence-Front/sequence/commit/926c20ca296078d5c1a2fc0b571575e36e9f8669) separates change handling and blur normalization for month/day fields. Do not claim a complete calendar/leap-year validation system.
+- [Logout cleanup](https://github.com/Sequence-Front/sequence/commit/926c20ca296078d5c1a2fc0b571575e36e9f8669) adds clearing browser storage after a successful logout API call. [Storage migration](https://github.com/Sequence-Front/sequence/commit/f1d4207b3250a8646ee70f8f1a78df3cd5228bb5) updates login, token refresh, requests, header/profile reads, logout and withdrawal consistently from localStorage to sessionStorage. The profile does not describe this as an XSS fix or guaranteed token revocation.
 
-Edit README.md for content. Keep screenshot files unchanged and update their source links here when replacing them. Run `node scripts/build-badges.mjs` for badges. Preview with `node scripts/preview.mjs`, then inspect the actual GitHub profile after publishing. No scheduled jobs, account secrets, third-party statistics services, or application deployments are required.
+## Technology inventory
+
+Main dependencies: [Sallae frontend](https://github.com/beshurl/SallaeMallae/blob/master/services/frontend/package.json), [Sallae backend](https://github.com/beshurl/SallaeMallae/blob/master/services/backend/pom.xml), [Bone frontend](https://github.com/beshurl/BoneToBe/blob/master/frontend/package.json), [DotShelf Unity](https://github.com/beshurl/DotShelf/blob/master/frontend/Packages/manifest.json), [DotShelf backend](https://github.com/beshurl/DotShelf/blob/master/backend/build.gradle.kts), [Sequence](https://github.com/Sequence-Front/sequence/blob/main/package.json).
+
+The broader collapsed inventory also reflects [GateStamp](https://github.com/beshurl/skala-temp-for-gain), [WAYTHER](https://github.com/beshurl/skala-vue), [Python pipeline](https://github.com/beshurl/SKALA_DAY1_Pipeline), and [O2O service](https://github.com/beshurl/o2oMarketService) dependencies inspected earlier. Their presence is evidence of project use, not a proficiency rating. Team-level AI systems are explicitly separated from personal responsibilities. Kotlin/Compose and Swift/SwiftUI are labeled prototype exploration.
+
+## Maintenance
+
+Edit README.md and keep troubleshooting links close to each claim. Preview using node scripts/preview.mjs. Preserve the user's latest text-first direction; do not restore screenshots or illustration covers. Local badges can be regenerated with node scripts/build-badges.mjs; logo licenses are in assets/vendor/devicon.

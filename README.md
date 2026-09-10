@@ -1,69 +1,91 @@
-<!-- Screenshots are original files from the linked project READMEs. Sources: .github/profile/SOURCES.md. -->
-
+<!-- Role and troubleshooting evidence: .github/profile/SOURCES.md. -->
 # 정준용 · Jeong Jun Yong
 
-**Full-Stack Developer** &nbsp; · &nbsp; Web / Backend / 3D
+**Full-Stack Developer** · Web / Backend / 3D
 
-React·Next.js·Vue로 사용자 흐름을 만들고, Java·Spring으로 API와 데이터를 연결합니다.<br />Unity·C#으로 책과 취향을 담는 3D 공간도 만들었습니다.
+웹 UI와 API, 데이터 흐름을 연결하고 Unity로 3D 인터랙션을 만듭니다. 주요 프로젝트에서 직접 맡은 일과 문제를 해결한 과정을 정리했습니다.
 
-<p>
-  <a href="#selected-work">Selected work</a> &nbsp; / &nbsp;
-  <a href="#stack--tools">Stack &amp; tools</a> &nbsp; / &nbsp;
-  <a href="#beyond-the-featured">More projects</a>
-</p>
-
-<br />
-
-## Selected work
+## 주요 프로젝트
 
 ### [살래말래](https://github.com/beshurl/SallaeMallae)
+AI 분석 결과와 시세·뉴스·재무 데이터를 통합하는 주식 분석 서비스.
 
-시세·뉴스·재무 데이터와 AI 분석 결과를 한 화면에서 확인하는 주식 분석 서비스.
+`Next.js` `TypeScript` `TanStack Query` `Zustand` `Spring Boot` `Redis`
 
-<a href="./assets/screenshots/sallaemallae-signals.png"><img src="./assets/screenshots/sallaemallae-signals.png" width="100%" alt="살래말래 실제 매매신호 화면 — 시가총액·섹터 필터, KOSPI 200 종목 목록, 매수 신호와 AI 신뢰도" /></a>
+**내가 맡은 일**
 
-<sub>매매신호 종합 화면 · 이미지를 누르면 원본 크기로 볼 수 있습니다.</sub>
+- 메인, 종목 목록·상세, 포트폴리오, 뉴스, 검색, 인증 화면과 API 연동을 구현했습니다.
+- 인기 검색어 SSE와 알림 연동, 프로필 이미지 업로드, 캐시·로딩 UX를 개선했습니다.
+- KIS 기반 주식 조회·실시간 시세 API와 Redis Top-list 캐시를 구현했습니다.
 
-**담당** &nbsp; 주요 화면·API 연동, KIS 주식 시세 API, Redis 캐시<br />
-**기술** &nbsp; Next.js · TypeScript · TanStack Query · Zustand · Spring Boot · Redis
+**트러블슈팅**
 
-<details>
-<summary><b>종목 상세 화면과 구현 내용 더 보기</b></summary>
+- **뉴스 페이지가 1페이지로 돌아가는 문제** — 페이지 묶음이 바뀔 때 쿼리 데이터가 잠시 비어 전체 페이지 수가 1로 계산되고, 페이지 보정 로직이 현재 페이지를 초기화했습니다. `placeholderData`로 이전 목록과 전체 개수를 유지해 새 응답을 기다리는 동안 페이지가 되돌아가지 않도록 수정했습니다. [수정 기록](https://github.com/beshurl/SallaeMallae/commit/18481f416829d50e49a31a23c31034bd3959d4af)
 
-<a href="./assets/screenshots/sallaemallae-stock-detail.png"><img src="./assets/screenshots/sallaemallae-stock-detail.png" width="100%" alt="살래말래 실제 종목 상세 화면 — 주가 차트, 관련 뉴스, 투자 지표와 분기 실적" /></a>
+- **로그아웃·계정 전환 후에도 남는 사용자 캐시** — 인증 상태와 서버 데이터 캐시가 별도로 유지되는 구조였습니다. `AuthQuerySync`에서 사용자 ID와 비회원 상태를 비교해 인증 주체가 바뀔 때 캐시를 초기화하고, 세션 복구 중에는 초기화를 건너뛰도록 구분했습니다. 이전 사용자의 데이터를 재사용하지 않도록 캐시 수명과 인증 상태를 연결했습니다. [수정 기록](https://github.com/beshurl/SallaeMallae/commit/b3039b860193b66664d7b4a885d492322a6c3b1e)
 
-- 메인, 종목 목록·상세, 포트폴리오, 뉴스, 검색, 알림 화면과 API 연동
-- OAuth, 프로필 이미지 업로드, 인기 검색어 SSE와 캐시·로딩 UX 개선
-- KIS 기반 주식 조회·실시간 시세 API, Redis Top-list 캐시 구현
-
-</details>
+- **외부 순위 API 실패 시 대체 목록의 시세 누락** — KIS 순위 조회가 실패해 로컬 종목으로 대체했을 때 일봉 데이터까지 없으면 현재가·등락률이 비었습니다. 현재 페이지에서 누락된 종목만 단건 시세로 보강하고, 보강 실패 시에는 기존 목록을 유지하도록 처리했습니다. 해당 실패 조합을 확인하는 단위 테스트도 추가했습니다. [수정·테스트](https://github.com/beshurl/SallaeMallae/commit/08bdf207ef8fc30d3b1bd1b7d21236361e72894f)
 
 <br />
 
-### [My Job Calendar](https://github.com/shipleaf/ITcampus_front)
+### [Bone To Be](https://github.com/beshurl/BoneToBe)
+체형을 분석해 어울리는 의류를 추천하는 서비스.
 
-취업공고·학생지원사업·자격증 일정을 모아 보고, 필요한 정보를 스크랩하는 캘린더 서비스.
+`React` `TypeScript` `Vite` `styled-components` `Zustand` `TanStack Query`
 
-<a href="./assets/screenshots/my-job-calendar.png"><img src="./assets/screenshots/my-job-calendar.png" width="100%" alt="My Job Calendar 실제 서비스 화면 — 취업공고·지원 프로그램·자격증 일정을 보여주는 월간 캘린더" /></a>
+**내가 맡은 일**
 
-<sub>전체 달력 화면 · 프로젝트 README에 수록된 발표 자료</sub>
+- 회원가입·로그인, 카카오·구글 OAuth, 프로필·마이페이지 화면과 API 연동을 구현했습니다.
+- 커뮤니티, 사용자 검색, 알림 기능을 연결하고 메인·소개 페이지의 애니메이션을 구현했습니다.
+- 진단 상태 저장 방식과 스크롤·섹션 애니메이션의 갱신 흐름을 개선했습니다.
 
-**담당** &nbsp; 프론트엔드 개발 참여<br />
-**기술** &nbsp; React · Recoil · styled-components · FullCalendar<br />
-**팀 수상** &nbsp; SW융합클러스터 2.0 디지털 콘텐츠 DX 해커톤 우수상
+**트러블슈팅**
 
-<details>
-<summary><b>스크랩·Google Calendar 연동 화면 더 보기</b></summary>
+- **소개 페이지의 무한 렌더링** — 렌더링마다 새로 만들어지는 섹션 ID 배열을 훅 의존성으로 사용하면서 Effect와 IntersectionObserver가 반복 생성됐습니다. 배열 참조 대신 섹션 ID의 내용으로 만든 키를 사용해, 내용이 같으면 메모이제이션이 유지되도록 수정했습니다. [수정 기록](https://github.com/beshurl/BoneToBe/commit/01a931c49775df5434a74ce9229265b5c3db2bca)
 
-<a href="./assets/screenshots/my-job-calendar-scrap.png"><img src="./assets/screenshots/my-job-calendar-scrap.png" width="100%" alt="My Job Calendar 개인 캘린더 화면 — 스크랩한 일정과 Google Calendar 동기화 버튼" /></a>
-
-관심 있는 정보를 스크랩하고, 개인 캘린더에서 확인하거나 Google Calendar와 동기화할 수 있습니다.
-
-</details>
+- **진단 사진까지 브라우저 저장소에 쌓이는 문제** — 진단 스토어 전체를 영속화해 사진 문자열까지 `sessionStorage`에 저장하고 있었습니다. Zustand의 `persist.partialize`로 `photoData`를 제외하고 기본 정보·분석 결과·리포트 ID만 저장하도록 제한했습니다. 화면에서 사용하는 사진과 복구에 필요한 상태를 분리했습니다. [수정 기록](https://github.com/beshurl/BoneToBe/commit/e779dfe66b60ebe08898970f4ffd9672f25a862a)
 
 <br />
 
-## Stack & tools
+### [DotShelf](https://github.com/beshurl/DotShelf)
+책과 취향을 담는 Unity 기반 3D 책장·독서 공간.
+
+`Unity` `C#` `UI Toolkit` `Spring Boot` `AWS S3` `Flyway`
+
+**내가 맡은 일**
+
+- 책장·노트북·책 시장 UI와 API 연동, 책장 스킨·배치 상태 동기화를 구현했습니다.
+- 노트북 UI를 첫 사용 시 비동기로 로드하도록 분리하고, 원격 에셋 캐시와 다른 사용자의 공간 방문 흐름을 구현했습니다.
+- Spring/S3 기반 썸네일 업로드·확정 API와 관련 테스트를 작성했습니다.
+
+**트러블슈팅**
+
+- **다른 사용자의 공간 방문 시 에셋을 불러오지 못하는 문제** — 기존 다운로드 API는 본인 소유 에셋만 허용해 다른 사람의 공간에 배치된 에셋을 불러오는 흐름과 맞지 않았습니다. 공개 공간 전용 manifest API를 만들고, 저장된 배치와 공간 소유자의 소유권을 검증했습니다. Unity에서 manifest를 먼저 등록한 뒤 버전·해시 기반 캐시로 에셋을 복원하도록 연결했습니다. [구현·검증 기록](https://github.com/beshurl/DotShelf/blob/master/docs/study/2026-05-13-feat-unity-remote-asset-cache.md)
+
+- **썸네일 업로드 재시도의 중복 갱신** — 다음 레이아웃 버전으로 S3 key를 만들면 업로드 확정 전 반복 발급 시 같은 key가 생성되고, 확정 재시도에도 버전이 증가했습니다. 발급 시각·UUID로 key를 분리하고 동일 key 확정은 한 번만 반영하도록 처리했습니다. 오래된 key도 거부하며, key 중복·동일 요청 재시도·순서가 뒤바뀐 확정을 검증하는 테스트를 추가했습니다. [수정·테스트](https://github.com/beshurl/DotShelf/commit/97670a916d4dbebd7d49920002d7acb15a371b17)
+
+<br />
+
+### [Sequence](https://github.com/Sequence-Front/sequence)
+대학생 개발자·디자이너를 위한 프로젝트 모집·협업 플랫폼.
+
+`React` `TypeScript` `Recoil` `styled-components` `Axios`
+
+**내가 맡은 일**
+
+- 프로젝트·아카이브 등록·수정 화면과 API 연동, 팀원 평가·알림·신고 기능에 참여했습니다.
+- 회원가입, 로그아웃·회원 탈퇴 등 사용자 흐름을 구현하고 전반적인 화면 스타일과 QA 오류를 수정했습니다.
+
+**트러블슈팅**
+
+- **회원가입 날짜 데이터의 형식 불일치** — 화면에서 선택한 입학·졸업 연도를 그대로 전송하던 부분을 `YYYY-MM-DD` 형식으로 변환하도록 수정했습니다. 활동·경력·자격증 날짜 입력은 입력 처리와 입력 확정 시 보정을 분리해 월·일 범위와 자릿수를 정리했습니다. [전송 형식 수정](https://github.com/Sequence-Front/sequence/commit/8f74f60ebe7525228f1b150c5fc81af721be1a7d) · [입력 보정](https://github.com/Sequence-Front/sequence/commit/926c20ca296078d5c1a2fc0b571575e36e9f8669)
+
+- **로그아웃 뒤 남는 인증·프로필 정보 정리** — 로그아웃 API 호출 뒤에도 클라이언트 저장 정보를 지우지 않던 흐름에 초기화를 추가했습니다. 이후 로그인, 토큰 갱신, API 요청, 헤더·프로필 조회, 로그아웃·탈퇴에서 사용하는 저장소를 `sessionStorage`로 함께 전환해 읽기·쓰기·삭제 위치를 맞췄습니다. [로그아웃 정리](https://github.com/Sequence-Front/sequence/commit/926c20ca296078d5c1a2fc0b571575e36e9f8669) · [저장소 전환](https://github.com/Sequence-Front/sequence/commit/f1d4207b3250a8646ee70f8f1a78df3cd5228bb5)
+
+<br />
+
+<details>
+<summary><b>사용 기술·도구 전체 보기</b></summary>
 
 프로젝트에서 사용한 기술과 도구를 영역별로 정리했습니다.
 
@@ -149,7 +171,7 @@ React·Next.js·Vue로 사용자 흐름을 만들고, Java·Spring으로 API와 
 - **3D tooling** — Addressables, Cinemachine, URP, glTFast
 - **Python & quality** — pandas, Pydantic, HTTPX, PyArrow, pytest, Ruff, Testing Library, MSW, ESLint, Prettier, Maven, Gradle
 
-**프로토타입에서 시도한 기술** — GateStamp의 Android·iOS 프로토타입에서 Kotlin·Jetpack Compose, Swift·SwiftUI도 탐색했습니다.
+**프로토타입에서 시도한 기술** — Kotlin·Jetpack Compose, Swift·SwiftUI도 탐색했습니다.
 
 </details>
 
@@ -165,28 +187,4 @@ AI 프로젝트에서는 모델의 결과를 사용자가 이해하고 활용할
 
 </details>
 
-<br />
-
-## Beyond the featured
-
-**[DotShelf](https://github.com/beshurl/DotShelf)** &nbsp; `Unity` `C#` `Spring Boot`
-<br />책과 취향을 담는 3D 책장. UI Toolkit, 씬 분리·지연 로딩, 원격 에셋 캐시와 S3 업로드 API 연동.
-
-**[Bone To Be](https://github.com/beshurl/BoneToBe)** &nbsp; `React` `TypeScript` `styled-components`
-<br />골격 인식 기반 의류 추천 서비스. 인증·프로필·커뮤니티 UI, API 연동과 메인 화면 애니메이션 담당.
-
-**[Sequence](https://github.com/Sequence-Front/sequence)** &nbsp; `React` `TypeScript` `Recoil`
-<br />대학생 개발자·디자이너의 프로젝트 협업 플랫폼. 프론트엔드 개발, 스타일 개선과 QA 참여.
-
-**[GateStamp](https://github.com/beshurl/skala-temp-for-gain)** &nbsp; `Next.js` `Spring Boot` `Docker`
-<br />공인 IP 검증과 당일 중복 확인을 적용한 출석 서비스.
-
-**[WAYTHER](https://github.com/beshurl/skala-vue)** &nbsp; `Vue` `Pinia` `PrimeVue`
-<br />날씨와 관광 정보를 연결해 방문 순서와 준비물을 제안하는 여행 서비스.
-
-**[이걸주네?](https://github.com/beshurl/igeoljune)** &nbsp; `Vue` `Spring Boot` `PostgreSQL`
-<br />취향·관계·예산 기반 선물 추천 프로젝트. Git 운영·코드 리뷰·통합과 파트 보조 담당.
-
-<br />
-
-[모든 저장소 보기 →](https://github.com/beshurl?tab=repositories)
+</details>
