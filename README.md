@@ -191,28 +191,4 @@ Material 3 · Retrofit / OkHttp · URLSession · NavigationStack · Android Keys
   <img src="./assets/tech/junit.svg" alt="JUnit" />
 </p>
 
-<details>
-<summary><b>라이브러리·서비스 구성 더 보기</b></summary>
-
-- **UI & forms** — HTML/CSS, React Hook Form, Zod, shadcn/ui, Radix UI, MUI, PrimeVue, Axios
-- **Charts & motion** — ECharts, Chart.js, Motion / Framer Motion, AOS, FullCalendar
-- **Backend & messaging** — REST API, Spring Security, OAuth 2.0, JWT, SSE, WebSocket, RabbitMQ, MyBatis, Flyway
-- **Storage & deployment** — AWS S3·EC2, MinIO, MariaDB, H2, Docker Compose, Caddy
-- **3D tooling** — Addressables, Cinemachine, URP, glTFast
-- **Python & quality** — pandas, Pydantic, HTTPX, PyArrow, pytest, Ruff, Testing Library, MSW, ESLint, Prettier, Maven, Gradle
-
-</details>
-
-<details>
-<summary><b>AI 서비스에서 연결한 시스템</b></summary>
-
-AI 프로젝트에서는 모델의 결과를 사용자가 이해하고 활용할 수 있는 화면과 서비스 흐름으로 연결했습니다. 아래는 참여 프로젝트의 AI·데이터 구성입니다.
-
-- **살래말래** — LightGBM·TFT·GARCH 기반 앙상블, LLM 토론·분석, FinBERT 뉴스 감성 분석, TimescaleDB·pgvector
-- **Bone To Be** — FastAPI 기반 AI 서버, MediaPipe·4D-Humans 체형 인식, PyTorch, WebRTC
-
-개인 담당 내용은 위 프로젝트 소개에 구분해 두었습니다.
-
-</details>
-
 </details>
