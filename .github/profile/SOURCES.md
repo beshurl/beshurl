@@ -84,7 +84,7 @@ The 2026-09-10 redesign uses structural ideas, not copied content or assets, fro
 - [bradgarropy](https://github.com/bradgarropy/bradgarropy): a short role-led introduction. The profile retains the owner's own name, scope and projects.
 - [posva](https://github.com/posva/posva): minimal identity and purposeful links. Used as a clarity reference, not as evidence of this owner's experience.
 
-The native project index is original to this profile. All five personal-role records, eleven troubleshooting cases and their evidence links remain in independently expandable sections. Previously displayed technology badges are replaced by accessible text; the original SVG files are retained in the repository. No banner, statistics widget, generated project cover or screenshot is reintroduced.
+The native project index is original to this profile. All five personal-role records, eleven troubleshooting cases and their evidence links remain in independently expandable sections. A subsequent owner request restores the previous local technology icon badges in four primary groups and the full inventory disclosure, with alt text and natural wrapping. No banner, statistics widget, generated project cover or screenshot is reintroduced.
 
 ## Maintenance
 

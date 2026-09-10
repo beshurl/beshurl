@@ -20,7 +20,7 @@ Full-stack development across web frontend, Android/Kotlin/Compose and iOS/Swift
 
 ## Capabilities and Constraints
 
-Use native GitHub Markdown, two-column summaries, and disclosure elements. No screenshots, project-cover illustrations, decorative hero, or external statistics widgets. Focus the project list on SallaeMallae, BoneToBe, DotShelf, GateStamp (native mobile), and Sequence. GateStamp is explicitly a prototype, not an app-store release claim. Keep concise contributions visible and complete engineering records expandable. Preserve the broad technology inventory as categorized text with Android and iOS coverage.
+Use native GitHub Markdown, two-column project summaries, and disclosure elements. No screenshots, project-cover illustrations, decorative hero, or external statistics widgets. Focus the project list on SallaeMallae, BoneToBe, DotShelf, GateStamp (native mobile), and Sequence. GateStamp is explicitly a prototype, not an app-store release claim. Keep concise contributions visible and complete engineering records expandable. The owner prefers the earlier icon badges for the technology stack; reuse them in labeled groups with Android and iOS coverage while preserving the compact project layout.
 
 ## Evidence on Hand
 

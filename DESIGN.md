@@ -6,22 +6,22 @@ A compact, GitHub-native engineering portfolio centered on individual contributi
 
 ## Colors
 
-All visible content uses GitHub's selected light or dark theme. Links supply the accent. Technology names are native text, not a wall of colored badges. Existing SVG assets remain in version control but are not displayed.
+Body content uses GitHub's selected light or dark theme. Links supply the accent. At the owner's request, technology names use the previous local navy icon badges with original logo colors, grouped by field rather than displayed as an undifferentiated wall.
 
 ## Typography
 
-Native GitHub typography. A centered name, compact identity line and introduction establish the opening. Left-aligned section headings and concise bold service names create the reading hierarchy. Code spans are reserved for the detailed engineering records. No image-rendered text.
+Native GitHub typography. A centered name, compact identity line and introduction establish the opening. Left-aligned section headings and concise bold service names create the reading hierarchy. Code spans are reserved for the detailed engineering records. Technology badges include readable labels and matching alt text; all other copy remains native text.
 
 ## Layout
 
-Compact centered introduction and three local navigation links. A two-column, five-row project index makes service context and personal implementation visible together. Five independently expandable engineering records retain the complete roles, troubleshooting, and source links. A four-row primary stack summary keeps web, backend, native mobile, and 3D visible; the full technology inventory expands below it. Tables have two wrapping columns and no fixed width. No forced two-column card layout on phones.
+Compact centered introduction and three local navigation links. A two-column, five-row project index makes service context and personal implementation visible together. Five independently expandable engineering records retain the complete roles, troubleshooting, and source links. Four labeled badge groups keep web, backend, native mobile, and 3D visible; the full badge inventory expands below them. Badges have a uniform 32px height and wrap naturally on phones. The project table retains two wrapping columns and no fixed width.
 
 ## Components
 
 - Project index: repository link and platform in the first column, service and implementation summary in the second.
 - Engineering record: a descriptive native details/summary control. Expanded content retains original linked project headings and personal-role bullets.
 - Troubleshooting: separate bold symptom and readable explanation, followed by a direct evidence link.
-- Technology inventory: visible four-domain text summary plus a single full-inventory disclosure.
+- Technology inventory: four visible icon-badge groups plus a single full-inventory disclosure. Reuse assets/tech SVGs; retain secondary native networking/storage tools as supporting text.
 
 ## Do's and Don'ts
 

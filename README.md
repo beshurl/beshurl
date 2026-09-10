@@ -165,42 +165,132 @@ iOS 출석 요청이 끝나기 전에 로그아웃할 수 있어, 응답을 적�
 
 ## 기술 스택
 
-| 분야 | 주요 기술 |
-| :--- | :--- |
-| **Web** | TypeScript, React, Next.js, Vue |
-| **Backend** | Java, Spring Boot, PostgreSQL, Redis |
-| **Android / iOS** | Kotlin, Jetpack Compose, Swift, SwiftUI |
-| **3D** | Unity, C#, UI Toolkit, UniTask |
+**Web**
+
+<p>
+  <img src="./assets/tech/typescript.svg" height="32" alt="TypeScript" />
+  <img src="./assets/tech/react.svg" height="32" alt="React" />
+  <img src="./assets/tech/nextjs.svg" height="32" alt="Next.js" />
+  <img src="./assets/tech/vue.svg" height="32" alt="Vue" />
+</p>
+
+**Backend**
+
+<p>
+  <img src="./assets/tech/java.svg" height="32" alt="Java" />
+  <img src="./assets/tech/spring-boot.svg" height="32" alt="Spring Boot" />
+  <img src="./assets/tech/postgresql.svg" height="32" alt="PostgreSQL" />
+  <img src="./assets/tech/redis.svg" height="32" alt="Redis" />
+</p>
+
+**Android / iOS**
+
+<p>
+  <img src="./assets/tech/kotlin.svg" height="32" alt="Kotlin" />
+  <img src="./assets/tech/jetpack-compose.svg" height="32" alt="Jetpack Compose" />
+  <img src="./assets/tech/swift.svg" height="32" alt="Swift" />
+  <img src="./assets/tech/swiftui.svg" height="32" alt="SwiftUI" />
+</p>
+
+**3D**
+
+<p>
+  <img src="./assets/tech/unity.svg" height="32" alt="Unity" />
+  <img src="./assets/tech/csharp.svg" height="32" alt="C#" />
+  <img src="./assets/tech/uitoolkit.svg" height="32" alt="UI Toolkit" />
+  <img src="./assets/tech/unitask.svg" height="32" alt="UniTask" />
+</p>
 
 <details>
 <summary>사용 기술·도구 전체 보기</summary>
 
-**Languages**<br>
-TypeScript, JavaScript, Java, Python, C#, Kotlin, Swift
+**Languages**
 
-**Frontend & UI**<br>
-React, Next.js, Vue, Vite, Tailwind CSS, styled-components
+<p>
+  <img src="./assets/tech/typescript.svg" height="32" alt="TypeScript" />
+  <img src="./assets/tech/javascript.svg" height="32" alt="JavaScript" />
+  <img src="./assets/tech/java.svg" height="32" alt="Java" />
+  <img src="./assets/tech/python.svg" height="32" alt="Python" />
+  <img src="./assets/tech/csharp.svg" height="32" alt="C#" />
+  <img src="./assets/tech/kotlin.svg" height="32" alt="Kotlin" />
+  <img src="./assets/tech/swift.svg" height="32" alt="Swift" />
+</p>
 
-**State & data fetching**<br>
-TanStack Query, Zustand, Pinia, Recoil
+**Frontend & UI**
 
-**Android**<br>
-Jetpack Compose, Material 3, Retrofit, OkHttp, Android Keystore
+<p>
+  <img src="./assets/tech/react.svg" height="32" alt="React" />
+  <img src="./assets/tech/nextjs.svg" height="32" alt="Next.js" />
+  <img src="./assets/tech/vue.svg" height="32" alt="Vue" />
+  <img src="./assets/tech/vite.svg" height="32" alt="Vite" />
+  <img src="./assets/tech/tailwindcss.svg" height="32" alt="Tailwind CSS" />
+  <img src="./assets/tech/styled-components.svg" height="32" alt="styled-components" />
+</p>
 
-**iOS**<br>
-SwiftUI, URLSession, NavigationStack, Keychain
+**State & data fetching**
 
-**Backend & database**<br>
-Spring Boot, Spring Security, JPA / Hibernate, QueryDSL, FastAPI<br>
-PostgreSQL, MySQL, Redis
+<p>
+  <img src="./assets/tech/tanstack-query.svg" height="32" alt="TanStack Query" />
+  <img src="./assets/tech/zustand.svg" height="32" alt="Zustand" />
+  <img src="./assets/tech/pinia.svg" height="32" alt="Pinia" />
+  <img src="./assets/tech/recoil.svg" height="32" alt="Recoil" />
+</p>
 
-**3D & interaction**<br>
-Unity, UI Toolkit, UniTask
+**Android**
 
-**Infrastructure & delivery**<br>
-Docker, Nginx, AWS, Git, GitLab CI
+<p>
+  <img src="./assets/tech/jetpack-compose.svg" height="32" alt="Jetpack Compose" />
+</p>
 
-**Testing & component development**<br>
-Playwright, Vitest, Storybook, MSW, JUnit
+Material 3, Retrofit, OkHttp, Android Keystore
+
+**iOS**
+
+<p>
+  <img src="./assets/tech/swiftui.svg" height="32" alt="SwiftUI" />
+</p>
+
+URLSession, NavigationStack, Keychain
+
+**Backend & database**
+
+<p>
+  <img src="./assets/tech/spring-boot.svg" height="32" alt="Spring Boot" />
+  <img src="./assets/tech/spring-security.svg" height="32" alt="Spring Security" />
+  <img src="./assets/tech/jpa.svg" height="32" alt="JPA / Hibernate" />
+  <img src="./assets/tech/querydsl.svg" height="32" alt="QueryDSL" />
+  <img src="./assets/tech/fastapi.svg" height="32" alt="FastAPI" />
+  <img src="./assets/tech/postgresql.svg" height="32" alt="PostgreSQL" />
+  <img src="./assets/tech/mysql.svg" height="32" alt="MySQL" />
+  <img src="./assets/tech/redis.svg" height="32" alt="Redis" />
+</p>
+
+**3D & interaction**
+
+<p>
+  <img src="./assets/tech/unity.svg" height="32" alt="Unity" />
+  <img src="./assets/tech/uitoolkit.svg" height="32" alt="UI Toolkit" />
+  <img src="./assets/tech/unitask.svg" height="32" alt="UniTask" />
+</p>
+
+**Infrastructure & delivery**
+
+<p>
+  <img src="./assets/tech/docker.svg" height="32" alt="Docker" />
+  <img src="./assets/tech/nginx.svg" height="32" alt="Nginx" />
+  <img src="./assets/tech/aws.svg" height="32" alt="AWS" />
+  <img src="./assets/tech/git.svg" height="32" alt="Git" />
+  <img src="./assets/tech/gitlab-ci.svg" height="32" alt="GitLab CI" />
+</p>
+
+**Testing & component development**
+
+<p>
+  <img src="./assets/tech/playwright.svg" height="32" alt="Playwright" />
+  <img src="./assets/tech/vitest.svg" height="32" alt="Vitest" />
+  <img src="./assets/tech/storybook.svg" height="32" alt="Storybook" />
+  <img src="./assets/tech/msw.svg" height="32" alt="MSW" />
+  <img src="./assets/tech/junit.svg" height="32" alt="JUnit" />
+</p>
 
 </details>
