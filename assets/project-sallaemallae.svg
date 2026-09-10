@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300" role="img" aria-labelledby="title"><title id="title">살래말래 — 시세와 뉴스, AI 분석을 한 화면에. 주식 분석을 위한 통합 서비스.</title><g font-family="Arial, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif">
+  <rect x="1" y="1" width="478" height="298" rx="16" fill="#E8EAFE"/>
+  <text x="28" y="38" font-size="13" fill="#4B5271" font-weight="700" >AI · FINANCIAL DATA</text>
+  <g transform="translate(29 59)">
+  <path d="M0 66H213M0 33H213M0 0H213" stroke="#C7CDF0"/>
+  <g stroke="#244DE8" stroke-width="2"><path d="M20 20V61M57 11V53M94 24V70M131 2V45M168 -4V32M205 -7V23"/></g>
+  <g fill="#244DE8"><rect x="12" y="31" width="16" height="21" rx="2"/><rect x="49" y="18" width="16" height="25" rx="2"/><rect x="123" y="9" width="16" height="23" rx="2"/><rect x="160" y="1" width="16" height="19" rx="2"/><rect x="197" y="-1" width="16" height="13" rx="2"/></g>
+  <rect x="86" y="34" width="16" height="23" rx="2" fill="#C77F70"/>
+  <path d="M253 31 292 9 331 31 292 54Z" fill="#244DE8"/><path d="M253 31 292 54V71L253 48Z" fill="#1835A6"/><path d="M292 54 331 31V48L292 71Z" fill="#8A9EEF"/>
+  <path d="M331 5 357 -10 383 5 357 20Z" fill="#8A9EEF"/><path d="M331 5 357 20V32L331 17Z" fill="#5D79DF"/><path d="M357 20 383 5V17L357 32Z" fill="#BFCDFE"/>
+</g>
+  <text x="28" y="177" font-size="35" fill="#1B2440" font-weight="700" letter-spacing="-1">살래말래</text>
+  <text x="29" y="211" font-size="18" fill="#39435E" font-weight="400" >시세와 뉴스, AI 분석을 한 화면에.</text><text x="29" y="237" font-size="18" fill="#39435E" font-weight="400" >주식 분석을 위한 통합 서비스.</text>
+  <text x="29" y="278" font-size="13" fill="#4B5271" font-weight="700" >NEXT.JS  /  SPRING  /  REDIS</text>
+  <path d="M429 266H449M440 257 449 266 440 275" fill="none" stroke="#1B2440" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+</g></svg>

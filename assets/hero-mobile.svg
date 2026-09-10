@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="540" viewBox="0 0 600 540" role="img" aria-labelledby="title"><title id="title">beshurl · 정준용 — Full-stack developer. Build across the stack.</title><g font-family="Arial, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif">
+  <style>.signal{animation:signal 4s ease-in-out infinite}@keyframes signal{0%,100%{opacity:.45}50%{opacity:1}}@media(prefers-reduced-motion:reduce){.signal{animation:none}}</style><rect width="600" height="540" rx="16" fill="#244DE8"/>
+  <text x="34" y="48" font-size="26" fill="#F4F6FF" font-weight="700" >beshurl</text><text x="153" y="48" font-size="21" fill="#D4DFFE" font-weight="400" >/ 정준용</text>
+  <text x="34" y="129" font-size="67" fill="#F4F6FF" font-weight="700" letter-spacing="-2">Build across</text>
+  <text x="34" y="201" font-size="67" fill="#F4F6FF" font-weight="700" letter-spacing="-2">the stack.</text>
+  <text x="36" y="244" font-size="23" fill="#E3EAFF" font-weight="400" >화면에서 데이터까지, 하나의 서비스로.</text>
+  <g transform="translate(340 317) scale(0.73)">
+  <path d="M0 142 128 72 256 142 128 216Z" fill="#162E8C"/>
+  <path d="M0 142 128 216 128 236 0 162Z" fill="#142976"/>
+  <path d="M128 216 256 142 256 162 128 236Z" fill="#345FEF"/>
+  <path d="M0 86 128 16 256 86 128 160Z" fill="#BFCDFE"/>
+  <path d="M0 86 128 160 128 180 0 106Z" fill="#829CF8"/>
+  <path d="M128 160 256 86 256 106 128 180Z" fill="#E8EAFE"/>
+  <path d="M36 22 128 -28 220 22 128 74Z" fill="#F5CBB6"/>
+  <path d="M36 22 128 74 128 94 36 42Z" fill="#D89776"/>
+  <path d="M128 74 220 22 220 42 128 94Z" fill="#F2BA9B"/>
+  <path d="M90 20 118 4 155 25 128 42Z" fill="#244DE8"/>
+  <path d="M90 20 128 42 128 57 90 35Z" fill="#1B3ABC"/>
+  <path d="M128 42 155 25 155 40 128 57Z" fill="#5478F4"/>
+  <circle class="signal" cx="128" cy="-40" r="5" fill="#F4F6FF"/>
+</g>
+  <text x="36" y="360" font-size="20" fill="#F4F6FF" font-weight="700" >WEB</text><text x="36" y="394" font-size="20" fill="#F4F6FF" font-weight="700" >BACKEND</text><text x="36" y="428" font-size="20" fill="#F4F6FF" font-weight="700" >3D EXPERIENCE</text>
+  <text x="36" y="500" font-size="15" fill="#D4DFFE" font-weight="700" >FULL-STACK DEVELOPER</text>
+</g></svg>
